@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Origo Prototype</title>
+    <script src="https://static.nrk.no/origo/major/6/origo/origo.min.js"></script>
+  </head>
+  <body class="org-root org-splitview">
+    <header class="org-bar org-bar--primary">
+      <h1>Kurator</h1>
+      <label class="org-button"><input type="radio" name="house">Experimenthus</label>
+      <label class="org-button"><input type="radio" name="house">El Globo</label>
+      <label class="org-button"><input type="radio" name="house">Ikke slett</label>
+      <label class="org-button"><input type="radio" name="house">Buring house</label>
+      <label class="org-button"><input type="radio" name="house">Brukertesthust</label>
+      <label class="org-button"><input type="radio" name="house">Tilgjengelighetshus</label>
+      <label class="org-button"><input type="radio" name="house" checked>Hoved</label>
+      <hr>
+      <button class="org-button">Eirik Backer</button>
+      <origo-dropdown hidden>
+        <button class="org-button">Eirik.Backer@nrk.no</button>
+        <hr>
+        <a class="org-button" href="#">Innstillinger</a>
+        <a class="org-button" href="#">Logg ut</a>
+        <button class="org-button">Nesting</button>
+        <origo-dropdown hidden>
+          <button class="org-button">Eirik.Backer@nrk.no</button>
+          <hr>
+          <a class="org-button" href="#">Innstillinger</a>
+          <a class="org-button" href="#">Logg ut</a>
+        </origo-dropdown>
+      </origo-dropdown>
+    </header>
+    <nav class="org-bar org-bar--secondary">
+      <button class="org-button org-muted">8 rom &nbsp; 11 etasjer</button>
+      <button class="org-button org-muted">
+        <svg width="1.429em" height="1.429em" aria-hidden="true"><use xlink:href="#org-user"></use></svg>
+        <sup class="org-badge org-color-black">8</sup>
+      </button>
+      <button class="org-button">Hoved <svg width="1.429em" height="1.429em" aria-hidden="true"><use xlink:href="#org-chevron-open"></use></svg></button>
+      <hr>
+      <button class="org-button org-button--secondary">Forhåndsvis</button>
+      <button class="org-button org-button--secondary">Lagre alt</button>
+      <button class="org-button org-button--primary">Publiser alt</button>
+    </nav>
+    <main>
+      <aside style="flex: 0 0 50%"></aside>
+      <section style="flex: 0 0 50%; display: flex; flex-direction: column;">
+        <div class="org-grid" style="padding:var(--org-large); flex: 1;">
+          <fieldset>
+            <legend class="org-sr">Type rom</legend>
+            <label class="org-button"><input type="radio" name="type" checked>Normal</label>
+            <label class="org-button"><input type="radio" name="type">Video</label>
+            <label class="org-button"><input type="radio" name="type">Plugin</label>
+            <label class="org-button"><input type="radio" name="type">Oversikt</label>
+          </fieldset>
+  
+          <fieldset>
+            <legend>Hent artikkel</legend>
+            <div class="org-bar">
+              <label data-org-tooltip="This is some useful stuff">
+                <span class="org-sr">URL</span>
+                <input class="org-input" type="text" value="https://stage.nrk.no/telemark/kjem-med-hjemme">
+              </label>
+              <button class="org-button org-button--secondary">
+                <svg width="1.429em" height="1.429em" aria-hidden="true"><use xlink:href="#org-repeat" /></svg>
+                Hent data
+              </button>
+            </div>
+          </fieldset>
+  
+          <fieldset>
+            <legend>Størrelse</legend>
+            <label class="org-button" data-org-tooltip="This is some useful stuff"><input type="radio" name="size" checked>25%</label>
+            <label class="org-button"><input type="radio" name="size">33%</label>
+            <label class="org-button"><input type="radio" name="size">50%</label>
+            <label class="org-button"><input type="radio" name="size">66%</label>
+            <label class="org-button"><input type="radio" name="size">75%</label>
+            <label class="org-button"><input type="radio" name="size">100%</label>
+            <label><input type="checkbox" class="org-switch"> Sidestilt på mobil</label>
+          </fieldset>
+  
+          <label>Stikktittel <input class="org-input" type="text" placeholder="placeholder"></label>
+  
+          <label>
+            Tittel <small class="org-muted">&mdash; Husk myk bindestrek for lange ord: ALT + 0173</small>
+            <input class="org-input" type="text" value="Kjem med hjemmesnikra plate">
+          </label>
+  
+          <fieldset>
+            <legend>Tittelstørrelse</legend>
+            <label class="org-button"><input type="radio" name="title-size" checked>1</label>
+            <label class="org-button"><input type="radio" name="title-size">2</label>
+            <label class="org-button"><input type="radio" name="title-size">3</label>
+            <label class="org-button"><input type="radio" name="title-size">4</label>
+            <label class="org-button"><input type="radio" name="title-size">5</label>
+            <label class="org-button"><input type="radio" name="title-size">6</label>
+            <label class="org-button"><input type="radio" name="title-size">7</label>
+          </fieldset>
+  
+          <label>
+            Ingress
+            <textarea class="org-input">Odd Norstoga har blant annet børsta støv av gamler songar når han kjem med den nye plata Aleine heime i morgon. Odd Norstoga har blant annet børsta støv av gamler songar når han kjem med den nye plata Aleine heime i morgon.</textarea>
+          </label>
+  
+          <div>
+            <button>Utseende</button>
+            <origo-expand class="org-grid org-color-shade">
+              <label class="org-6of12">Type <select class="org-input"><option>Magasin</option></select></label>
+              <label class="org-6of12">Blobb <select class="org-input"><option>Magasin</option></select></label>
+              <fieldset>
+                <legend>Bakgrunn</legend>
+                <label class="org-button"><input type="radio" name="background" checked>Hvit</label>
+                <label class="org-button"><input type="radio" name="background">Sort</label>
+              </fieldset>
+            </origo-expand>
+          </div>
+        </div>
+        <nav class="org-bar org-bar--secondary" style="padding-right: var(--org-large)">
+          <button class="org-button">Rom <svg width="1.429em" height="1.429em" aria-hidden="true"><use xlink:href="#org-chevron-open"></use></svg></button>
+          <button class="org-button">Avbryt</button>
+          <button class="org-button org-button--secondary">Lagre etasjen</button>
+          <button class="org-button org-button--primary">Publiser etasjen</button>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>
