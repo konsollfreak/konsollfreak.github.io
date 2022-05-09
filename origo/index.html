@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Origo Prototype</title>
+    <title>Origo prototype</title>
     <script src="https://static.nrk.no/origo/major/6/origo/origo.min.js"></script>
   </head>
   <body class="org-root org-splitview">
+
     <header class="org-bar org-bar--primary">
       <h1>Kurator</h1>
       <label class="org-button"><input type="radio" name="house">Experimenthus</label>
@@ -18,6 +19,7 @@
       <label class="org-button"><input type="radio" name="house" checked>Hoved</label>
       <hr>
       <button class="org-button">Eirik Backer</button>
+
       <origo-dropdown hidden>
         <button class="org-button">Eirik.Backer@nrk.no</button>
         <hr>
@@ -32,6 +34,7 @@
         </origo-dropdown>
       </origo-dropdown>
     </header>
+
     <nav class="org-bar org-bar--secondary">
       <button class="org-button org-muted">8 rom &nbsp; 11 etasjer</button>
       <button class="org-button org-muted">
@@ -104,6 +107,13 @@
             <textarea class="org-input">Odd Norstoga har blant annet børsta støv av gamler songar når han kjem med den nye plata Aleine heime i morgon. Odd Norstoga har blant annet børsta støv av gamler songar når han kjem med den nye plata Aleine heime i morgon.</textarea>
           </label>
   
+          <button type="button">EXPAND FOR JESUS!</button>       <!-- Must be a unstyled button placed before content -->
+          <origo-expand hidden>                       <!-- Toggle hidden attribute to expand/unexpand -->
+            <p>One</p>
+            <p>Two</p>
+            <p>Three</p>
+          </origo-expand>
+
           <div>
             <button>Utseende</button>
             <origo-expand class="org-grid org-color-shade">
