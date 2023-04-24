@@ -1,0 +1,8 @@
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  border: 5px solid black;
+  margin: 0;
+  padding: 30px;
