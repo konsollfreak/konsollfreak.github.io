@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box; /* sørger for at størrelser er totalen av boksen og ikke bare innholdet */
+  }
+
+  body {
+    padding: 30px;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .intro {
+    grid-area: intro;
+  }
+
+  .news {
+    grid-area: news;
+  }
+  
+  .books {
+    grid-area: books;
+  }
+
+  .page-wrapper {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "intro intro intro"
+      "news news books";
+  }
+
+  .story {
+    padding: 20px;
+    /*border-left: 3px solid black;
+    border-bottom: 3px solid black;*/
+  }
+
+  .book {
+    padding: 20px;
+  }
