@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box; /* sørger for at størrelser er totalen av boksen og ikke bare innholdet */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  background-color: #43281c;
+  color: #fbf2c0;
+  font-size: 16px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 25px;
+  position: relative;
+  top: 3px;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
