@@ -52,14 +52,15 @@ h2 {
   width: 100%;
   padding: 30px;
   margin: 0 auto;
-
   display: grid;
   row-gap: 20px;
   column-gap: 30px;
   grid-template-areas:
-    "order checkout order-details"
+    "order order-details" 
+    "checkout"
     ;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  
 }
 
 .checkout {
